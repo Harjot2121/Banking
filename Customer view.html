@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Banking Apllication </title>
+    <style>
+        .header {
+            text-align: center;
+            background-color: #1abc9c;
+            font-size: 25px;
+            color: white;
+            /* margin-top: 0px; */
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class='header'>
+        <h1>ABC Bank</h1>
+        <h3>Bank Customer Details</h3>
+
+
+    </div>
+    <div class="container" style="
+    margin-top: 25px;
+    margin-left: 20px;
+    width: 95%;
+    margin-right: 20px;
+">
+
+        <div class="panel-group">
+            <div class="panel panel-success">
+                <div class="panel-heading">Customers List</div>
+                <div class="panel-body">Table
+                    <table class="table table-bordered">
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Current balance</th>
+                            <th>view column</th>
+                        </tr>
+                        <tr>
+                            <td>Harjot kaur</td>
+                            <td>Harjot.kaur21@gmail.com</td>
+                            <td>5000</td>
+                            <td> <button type="button" class="btn btn-info btn-lg" data-toggle="modal"
+                                    data-target="#myModal"><span class="glyphicon glyphicon-user"></span> User</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Yamank</td>
+                            <td>Yamank21@gmail.com</td>
+                            <td>10000</td>
+                            <td> <button type="button" class="btn btn-info btn-lg" data-toggle="modal"
+                                    data-target="#myModal">
+                                    <span class="glyphicon glyphicon-user"></span> User
+                                </button></td>
+                        </tr>
+                        <tr>
+                            <td>Manvinder Singh</td>
+                            <td>manvinder21@gmail.com</td>
+                            <td>10000</td>
+                            <td> <button type="button" class="btn btn-info btn-lg" data-toggle="modal"
+                                    data-target="#myModal"><span class="glyphicon glyphicon-user"></span> User</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Harjot kaur</td>
+                            <td>Harjot.kaur21@gmail.com</td>
+                            <td>5000</td>
+                            <td> <button type="button" class="btn btn-info btn-lg" data-toggle="modal"
+                                    data-target="#myModal"><span class="glyphicon glyphicon-user"></span> User</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Yamank</td>
+                            <td>Yamank21@gmail.com</td>
+                            <td>10000</td>
+                            <td> <button type="button" class="btn btn-info btn-lg" data-toggle="modal"
+                                    data-target="#myModal">
+                                    <span class="glyphicon glyphicon-user"></span> User
+                                </button></td>
+                        </tr>
+                        <tr>
+                            <td>Manvinder Singh</td>
+                            <td>manvinder21@gmail.com</td>
+                            <td>10000</td>
+                            <td> <button type="button" class="btn btn-info btn-lg" data-toggle="modal"
+                                    data-target="#myModal"><span class="glyphicon glyphicon-user"></span> User</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Harjot kaur</td>
+                            <td>Harjot.kaur21@gmail.com</td>
+                            <td>5000</td>
+                            <td> <button type="button" class="btn btn-info btn-lg" data-toggle="modal"
+                                    data-target="#myModal"><span class="glyphicon glyphicon-user"></span> User</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Yamank</td>
+                            <td>Yamank21@gmail.com</td>
+                            <td>10000</td>
+                            <td> <button type="button" class="btn btn-info btn-lg" data-toggle="modal"
+                                    data-target="#myModal">
+                                    <span class="glyphicon glyphicon-user"></span> User
+                                </button></td>
+                        </tr>
+                        <tr>
+                            <td>Manvinder Singh</td>
+                            <td>manvinder21@gmail.com</td>
+                            <td>10000</td>
+                            <td> <button type="button" class="btn btn-info btn-lg" data-toggle="modal"
+                                    data-target="#myModal"><span class="glyphicon glyphicon-user"></span> User</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Manvinder Singh</td>
+                            <td>manvinder21@gmail.com</td>
+                            <td>10000</td>
+                            <td> <button type="button" class="btn btn-info btn-lg" data-toggle="modal"
+                                    data-target="#myModal"><span class="glyphicon glyphicon-user"></span> User</button>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal" role="dialog">
+                        <div class="modal-dialog">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Customer Details</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="form-row">
+                                          <div class="form-group col-md-6"> 
+                                            <label for="inputEmail4">First Name</label>
+                                            <input type="text" class="form-control" id="firstName" placeholder="First Name">
+                                          </div>
+                                          <div class="form-group col-md-6">
+                                            <label for="inputPassword4">Last Name</label>
+                                            <input type="text" class="form-control" id="inputPassword4" placeholder="Last Name">
+                                          </div>
+                                        </div>
+                                        <div class="form-group">
+                                          <label for="inputAddress">Address</label>
+                                          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                                        </div>
+                                       
+                                        <div class="form-row">
+                                          <div class="form-group col-md-6">
+                                            <label for="inputCity">City</label>
+                                            <input type="text" class="form-control" id="inputCity">
+                                          </div>
+                                          <div class="form-group col-md-3">
+                                            <label for="inputState">State</label>
+                                            <input type="text" class="form-control" id="inputCity">
+                                    
+                                          </div>
+                                          <div class="form-group col-md-3">
+                                            <label for="inputZip">Balance</label>
+                                            <input type="text" class="form-control" id="balance">
+                                          </div>
+                                        </div>
+                                       
+                                        <button type="submit" class="btn btn-primary">Transfer Balance</button>
+                                      </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
