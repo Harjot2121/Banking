@@ -18,14 +18,14 @@ var url = "mongodb+srv://dbuser:dbuser@harjotcluster.fkkhl.mongodb.net/test?auth
 //   console.log("Database created!");
 //   dbo = db.db("Banking_System");
 //   var myobj = {
-//     "Customer_ID": "3",
-//     "First_Name": "Amandeep",
-//     "Last_Name": "Singh",
-//     "Address": "123 Laxmi nagar delhi",
-//     "City": "Delhi",
-//     "State": "Delhi",
-//     "Balance": "6000",
-//     "Email": "amandeep.singh@amity.edu"
+//     "Customer_ID": "5",
+//     "First_Name": "Mandeep",
+//     "Last_Name": "Kaur",
+//     "Address": "Noida, UP",
+//     "City": "UP",
+//     "State": "UP",
+//     "Balance": "20000",
+//     "Email": "mandeep.kaur@amity.edu"
 // };
 //   dbo.collection("Customer").insertOne(myobj, function(err, res) {
 //     if (err) throw err;
@@ -52,12 +52,37 @@ app.get('/getCustomers',(req, res) => {
         var temp;
         dbo.collection("Customer").find({}).toArray(function(err, result) {
             if (err) throw err;
-            console.log(result);
+            // console.log(result);
             temp = result;
             db.close();
             res.send(200,{"Data":result})
           });
         
+    });
+
+});
+
+app.post('/postCustomer',(req, res) => {
+    console.log("Inside the Post Customer123",(req.body.info));
+
+    
+    MongoClient.connect(url, function (err, db) {
+        if (err) throw err;
+
+        console.log("Database created!");
+        var  dbo = db.db("Banking_System");
+        var temp;
+        (req.body.info).forEach((item) => {
+            console.log("Inside the item", item[0].Customer_ID);
+            dbo.collection("Customer").updateOne({Customer_ID : item[0].Customer_ID},{$set:{Balance: item[0].Balance }},function(err,result){
+            if (err) throw err;
+            // console.log(result);
+            })
+            
+        });
+        db.close();
+          res.send(200,{"message":"success"})
+          
     });
 
 })
