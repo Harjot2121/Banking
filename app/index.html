@@ -37,96 +37,19 @@
             <div class="panel panel-success">
                 <div class="panel-heading">Customers List</div>
                 <div class="panel-body">Table
-                    <table class="table table-bordered">
-                        <tr>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Current balance</th>
-                            <th>view column</th>
-                        </tr>
-                        <tr>
-                            <td>Harjot kaur</td>
-                            <td>Harjot.kaur21@gmail.com</td>
-                            <td>5000</td>
-                            <td> <button type="button" class="btn btn-info btn-lg" data-toggle="modal"
-                                    data-target="#myModal"><span class="glyphicon glyphicon-user"></span> User</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Yamank</td>
-                            <td>Yamank21@gmail.com</td>
-                            <td>10000</td>
-                            <td> <button type="button" class="btn btn-info btn-lg" data-toggle="modal"
-                                    data-target="#myModal">
-                                    <span class="glyphicon glyphicon-user"></span> User
-                                </button></td>
-                        </tr>
-                        <tr>
-                            <td>Manvinder Singh</td>
-                            <td>manvinder21@gmail.com</td>
-                            <td>10000</td>
-                            <td> <button type="button" class="btn btn-info btn-lg" data-toggle="modal"
-                                    data-target="#myModal"><span class="glyphicon glyphicon-user"></span> User</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Harjot kaur</td>
-                            <td>Harjot.kaur21@gmail.com</td>
-                            <td>5000</td>
-                            <td> <button type="button" class="btn btn-info btn-lg" data-toggle="modal"
-                                    data-target="#myModal"><span class="glyphicon glyphicon-user"></span> User</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Yamank</td>
-                            <td>Yamank21@gmail.com</td>
-                            <td>10000</td>
-                            <td> <button type="button" class="btn btn-info btn-lg" data-toggle="modal"
-                                    data-target="#myModal">
-                                    <span class="glyphicon glyphicon-user"></span> User
-                                </button></td>
-                        </tr>
-                        <tr>
-                            <td>Manvinder Singh</td>
-                            <td>manvinder21@gmail.com</td>
-                            <td>10000</td>
-                            <td> <button type="button" class="btn btn-info btn-lg" data-toggle="modal"
-                                    data-target="#myModal"><span class="glyphicon glyphicon-user"></span> User</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Harjot kaur</td>
-                            <td>Harjot.kaur21@gmail.com</td>
-                            <td>5000</td>
-                            <td> <button type="button" class="btn btn-info btn-lg" data-toggle="modal"
-                                    data-target="#myModal"><span class="glyphicon glyphicon-user"></span> User</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Yamank</td>
-                            <td>Yamank21@gmail.com</td>
-                            <td>10000</td>
-                            <td> <button type="button" class="btn btn-info btn-lg" data-toggle="modal"
-                                    data-target="#myModal">
-                                    <span class="glyphicon glyphicon-user"></span> User
-                                </button></td>
-                        </tr>
-                        <tr>
-                            <td>Manvinder Singh</td>
-                            <td>manvinder21@gmail.com</td>
-                            <td>10000</td>
-                            <td> <button type="button" class="btn btn-info btn-lg" data-toggle="modal"
-                                    data-target="#myModal"><span class="glyphicon glyphicon-user"></span> User</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Manvinder Singh</td>
-                            <td>manvinder21@gmail.com</td>
-                            <td>10000</td>
-                            <td> <button type="button" class="btn btn-info btn-lg" data-toggle="modal"
-                                    data-target="#myModal"><span class="glyphicon glyphicon-user"></span> User</button>
-                            </td>
-                        </tr>
+                    <table class="table table-bordered" id="CustomerView">
+
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Current balance</th>
+                                <th>Address</th>
+                                <th>view column</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
                     </table>
 
                     <!-- Modal -->
@@ -142,38 +65,41 @@
                                 <div class="modal-body">
                                     <form>
                                         <div class="form-row">
-                                          <div class="form-group col-md-6"> 
-                                            <label for="inputEmail4">First Name</label>
-                                            <input type="text" class="form-control" id="firstName" placeholder="First Name">
-                                          </div>
-                                          <div class="form-group col-md-6">
-                                            <label for="inputPassword4">Last Name</label>
-                                            <input type="text" class="form-control" id="inputPassword4" placeholder="Last Name">
-                                          </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="inputEmail4">First Name</label>
+                                                <input type="text" class="form-control" id="firstName"
+                                                    placeholder="First Name">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="inputPassword4">Last Name</label>
+                                                <input type="text" class="form-control" id="inputPassword4"
+                                                    placeholder="Last Name">
+                                            </div>
                                         </div>
                                         <div class="form-group">
-                                          <label for="inputAddress">Address</label>
-                                          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                                            <label for="inputAddress">Address</label>
+                                            <input type="text" class="form-control" id="inputAddress"
+                                                placeholder="1234 Main St">
                                         </div>
-                                       
+
                                         <div class="form-row">
-                                          <div class="form-group col-md-6">
-                                            <label for="inputCity">City</label>
-                                            <input type="text" class="form-control" id="inputCity">
-                                          </div>
-                                          <div class="form-group col-md-3">
-                                            <label for="inputState">State</label>
-                                            <input type="text" class="form-control" id="inputCity">
-                                    
-                                          </div>
-                                          <div class="form-group col-md-3">
-                                            <label for="inputZip">Balance</label>
-                                            <input type="text" class="form-control" id="balance">
-                                          </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="inputCity">City</label>
+                                                <input type="text" class="form-control" id="inputCity">
+                                            </div>
+                                            <div class="form-group col-md-3">
+                                                <label for="inputState">State</label>
+                                                <input type="text" class="form-control" id="inputCity">
+
+                                            </div>
+                                            <div class="form-group col-md-3">
+                                                <label for="inputZip">Balance</label>
+                                                <input type="text" class="form-control" id="balance">
+                                            </div>
                                         </div>
-                                       
+
                                         <button type="submit" class="btn btn-primary">Transfer Balance</button>
-                                      </form>
+                                    </form>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -187,6 +113,55 @@
             </div>
         </div>
     </div>
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var customerDetails;
+            getData();
+            function getData() {
+                console.log("Inside the get Data ");
+                $.ajax({
+                    type: "GET",
+                    dataType: "json",
+                    url: "http://localhost:8080/getCustomers",
+                    success: function (data) {
+                        var tableData = JSON.parse(JSON.stringify(data));
+                        console.log("Table Data", tableData.Data);
+                        customerDetails = tableData.Data;
+                        var order_data = ''
+                        //looping under data->data
+                        $.each(tableData.Data, function (key, value) {
+
+                            order_data += '<tr>';
+                            //getting values 
+                            order_data += '<td>' + value.Customer_ID + '</td>';
+                            order_data += '<td>' + value.First_Name + '</td>';
+                            order_data += '<td>' + value.Last_Name + '</td>';
+                            order_data += '<td>' + value.Balance + '</td>';
+                            order_data += '<td>' + value.Address + '</td>';
+                            order_data += '<td>' +`<button type="button" class="btn btn-info btn-lg" onclick="viewCustomer('${value.Customer_ID}')"><span class="glyphicon glyphicon-user"></span> User</button>` + '</td>';
+                            order_data += '</tr>';
+
+                        })
+
+                        $('#CustomerView>tbody').append(order_data);
+
+                    }
+                });
+            }
+            /* View Customer Function*/
+            function viewCustomer(custID){
+                   console.log("Inside the Customer Function",custID);
+                    console.log("Inside the View Customer",customerDetails);
+                    $('#myModal').modal('show');
+            }
+        });
+
+
+    </script>
 </body>
+
 
 </html>
